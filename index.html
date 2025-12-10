@@ -11,6 +11,7 @@
             <input type="number" id="second-number" placeholder="Число 2">
             <div class="buttons">
                 <button id="plus"><span>+</span></button>
+                <button id="minus"><span>-</span></button>
             </div>
             <div class="result">Результат: <span id="output"></span></div>
         </main>
@@ -34,6 +35,10 @@
                 switch (id_button) {
                     case "plus":
                         result = first_number + second_number;
+                        field_result.textContent = result;
+                        break;
+                    case "minus":
+                        result = first_number - second_number;
                         field_result.textContent = result;
                         break;
                 }

@@ -52,11 +52,16 @@ body .calculator button {
   border-radius: 5px;
   font-size: 2rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body .calculator button span {
   display: inline-block;
   transition: transform 0.3s ease-in-out;
+  transform-origin: center;
 }
 body .calculator button:hover span {
   transform: rotate(360deg);
+  transform-origin: center;
 }/*# sourceMappingURL=styles.css.map */
