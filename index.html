@@ -12,6 +12,7 @@
             <div class="buttons">
                 <button id="plus"><span>+</span></button>
                 <button id="minus"><span>-</span></button>
+                <button id="multiply"><span>*</span></button>
             </div>
             <div class="result">Результат: <span id="output"></span></div>
         </main>
@@ -39,6 +40,10 @@
                         break;
                     case "minus":
                         result = first_number - second_number;
+                        field_result.textContent = result;
+                        break;
+                    case "multiply":
+                        result = first_number * second_number;
                         field_result.textContent = result;
                         break;
                 }
