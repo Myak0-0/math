@@ -13,6 +13,7 @@
                 <button id="plus"><span>+</span></button>
                 <button id="minus"><span>-</span></button>
                 <button id="multiply"><span>*</span></button>
+                <button id="divide"><span>/</span></button>
             </div>
             <div class="result">Результат: <span id="output"></span></div>
         </main>
@@ -46,6 +47,10 @@
                         result = first_number * second_number;
                         field_result.textContent = result;
                         break;
+                    case "divide":
+                        result = first_number / second_number;
+                        field_result.textContent = result;
+                        break;                        
                 }
                 
             })
