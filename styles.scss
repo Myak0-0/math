@@ -6,6 +6,9 @@ $acsent: #ffa530;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 body {
   background: $bg;
   font-family: Arial, sans-serif;
@@ -25,18 +28,19 @@ body {
 
     input {
       padding: 10px;
-      font-size: 16px;
+      font-size: 1rem;
       border-radius: 5px;
       outline: none;
-      border: 1px solid rgba($acsent, 0.5);
+      border: 1px solid rgba($acsent, 0.7);
       &:focus {
-        border: 1px solid rgba($acsent, 1);
+        box-shadow: 0 1px 2px 1px rgba($acsent,1);
       }
     }
 
     .buttons {
       display: grid;
       gap: 10px;
+      grid-template-columns: repeat(auto-fill, 50px);
     }
 
     .result {
@@ -44,15 +48,22 @@ body {
     }
 
     button {
-      padding: 10px 20px;
-      background: $acsent;
+      width: 50px;
+      height: 50px;
+      background: rgba($acsent, 1);
       color: white;
       border: none;
       border-radius: 5px;
+      font-size: 2rem;
       cursor: pointer;
+    
+      span {
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+      }  
 
-      &:hover {
-        background: darken($acsent, 10%);
+      &:hover span {
+        transform: rotate(360deg);
       }
     }
   }

@@ -7,12 +7,38 @@
     </head>
     <body>
         <main class="calculator">
-            <input type="number" id="first-number" placeholder="Число 1">
+            <input type="text" id="first-number" placeholder="Число 1">
             <input type="number" id="second-number" placeholder="Число 2">
             <div class="buttons">
-                <!-- Кнопки для вычисления -->
+                <button id="plus"><span>+</span></button>
             </div>
-            <div class="result">Результат: <span id="output"></span></div>            
+            <div class="result">Результат: <span id="output"></span></div>
         </main>
     </body>
+    <script>
+        document.querySelectorAll("button").forEach((element) =>
+            element.addEventListener('click', () => {
+                let id_button = String(element.id);
+                let first_number = document.getElementById("first-number").value;
+                let second_number = document.getElementById("second-number").value;
+                let field_result = document.getElementById("output");
+                let result = 0;
+
+                first_number = Number(first_number);
+                second_number = Number(second_number);
+                
+                if (isNaN(first_number) || isNaN(second_number)) {
+                    field_result.textContent = "Ошибка расчета";
+                    return;
+                }
+                switch (id_button) {
+                    case "plus":
+                        result = first_number + second_number;
+                        field_result.textContent = result;
+                        break;
+                }
+                
+            })
+        )
+    </script>
 </html>
